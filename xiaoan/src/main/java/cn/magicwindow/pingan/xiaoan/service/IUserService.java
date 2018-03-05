@@ -14,4 +14,6 @@ public interface IUserService {
     User login(String telephone, String isVerified);
 
     User save(String userId, String userName, String birthday,String sex, String maritalStatus, String photo);
+
+    User saveSignature(String userId, String signature);
 }

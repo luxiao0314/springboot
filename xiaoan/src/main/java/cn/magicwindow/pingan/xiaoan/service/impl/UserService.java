@@ -46,4 +46,13 @@ class UserService implements IUserService {
         iUserDao.save(user);
         return user;
     }
+
+    @Override
+    public User saveSignature(String userId, String signature) {
+        User user = iUserDao.findByUserId(userId);
+        if (user == null) return null;
+        user.setSignature(signature);
+        iUserDao.save(user);
+        return user;
+    }
 }

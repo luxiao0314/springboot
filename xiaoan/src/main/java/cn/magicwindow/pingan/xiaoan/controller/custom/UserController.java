@@ -1,5 +1,6 @@
 package cn.magicwindow.pingan.xiaoan.controller.custom;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -47,15 +48,33 @@ public class UserController {
      */
     @GetMapping(value = "save")
     public Msg save(@RequestParam("userId") String userId,
-                     @RequestParam("userName") String userName,
-                     @RequestParam("birthday") String birthday,
-                     @RequestParam("sex") String sex,
-                     @RequestParam("maritalStatus") String maritalStatus,
-                     @RequestParam("photo") String photo) {
+                    @RequestParam("userName") String userName,
+                    @RequestParam("birthday") String birthday,
+                    @RequestParam("sex") String sex,
+                    @RequestParam("maritalStatus") String maritalStatus,
+                    @RequestParam("photo") String photo) {
         User user = iUserService.save(userId, userName, birthday, sex, maritalStatus, photo);
         if (user == null) {
             return Msg.error();
         }
         return Msg.success().add("user", user);
+    }
+
+    /**
+     * 保存用户签名
+     *
+     * @return
+     */
+    @GetMapping(value = "save/signature")
+    public Msg saveSignature(@RequestParam("signature") String signature,
+                             @RequestParam("userId") String userId) {
+        if (StringUtils.isEmpty(signature)) {
+            return Msg.error("请个性签名不能为空");
+        }
+        User user = iUserService.saveSignature(userId,signature);
+        if (user == null) {
+            return Msg.error();
+        }
+        return Msg.success().add("signature", signature);
     }
 }
