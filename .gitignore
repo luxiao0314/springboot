@@ -1,0 +1,39 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+src/main/resources/static/
+src/main/resources/templates/
+xiaoan-common/src/main/resources/
+xiaoan-common/src/test/
+xiaoan-model/src/main/java/cn/magicwindow/pingan/model/common/
+xiaoan-model/src/main/resources/
+xiaoan-model/src/test/
+xiaoan/src/main/java/cn/magicwindow/pingan/xiaoan/common/
+xiaoan/src/main/java/cn/magicwindow/pingan/xiaoan/controller/common/
+xiaoan/src/main/java/cn/magicwindow/pingan/xiaoan/dao/common/
+xiaoan/src/main/java/cn/magicwindow/pingan/xiaoan/dto/
+xiaoan/src/main/java/cn/magicwindow/pingan/xiaoan/entity/
+xiaoan/src/main/java/cn/magicwindow/pingan/xiaoan/util/
+xiaoan/src/main/resources/static/
+xiaoan/src/main/resources/templates/

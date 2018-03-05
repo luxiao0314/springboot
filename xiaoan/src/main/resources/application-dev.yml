@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+name: tom
+age: 20
+
+easemob:
+  app:
+    name: safetyuser
+  org:
+    name: 1136170823115366
+  client:
+    id: YXA6eE0-AJ9pEeeUHEEOVnTh5A
+    secret: YXA6ko7LMxGWbj_WvnbN_UGi3Ik119w
+  grant:
+    type: client_credentials
